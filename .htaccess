@@ -1,0 +1,18 @@
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9_]*).html$ index.php?page=$1 [L]
+RewriteRule userFolder-([^<>'"=]*).html$ index.php?page=userFolder&category=$1 [L]
+
+RewriteCond %{HTTP_HOST} !^www\.image-upload\.ch [NC]
+RewriteRule (.*) http://www.image-upload.ch/$1 [QSA,R=301,L]
+
+Redirect 301 /accueil.html http://www.image-upload.ch/home.html
+Redirect 301 /inscription.html http://www.image-upload.ch/signUp.html
+Redirect 301 /statistique.html http://www.image-upload.ch/statistics.html
+Redirect 301 /contact.html http://www.image-upload.ch/contactUs.html
+Redirect 301 /motdepasse.html http://www.image-upload.ch/passwordLost.html
+
+Redirect 301 /index.php?page=accueil http://www.image-upload.ch/home.html
+Redirect 301 /index.php?page=inscription http://www.image-upload.ch/signUp.html
+Redirect 301 /index.php?page=statistique http://www.image-upload.ch/statistics.html
+Redirect 301 /index.php?page=contact http://www.image-upload.ch/contactUs.html
+Redirect 301 /index.php?page=motdepasse http://www.image-upload.ch/passwordLost.html

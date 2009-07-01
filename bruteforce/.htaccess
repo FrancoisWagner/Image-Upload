@@ -1,0 +1,2 @@
+# Interdiction d'accéder au contenu du répertoire sauf via le serveur et par FTP
+Deny from all
